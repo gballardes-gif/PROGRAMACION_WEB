@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f5;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 420px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1f3b57;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.boton, button {
+    display: block;
+    text-align: center;
+    background-color: #2e86de;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton:hover, button:hover {
+    background-color: #1b5fa8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.resultado {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #e8f4ea;
+    border-left: 4px solid #2e9e4f;
+}
+
+.volver {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    color: #2e86de;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    background-color: #1f3b57;
+    padding: 14px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}

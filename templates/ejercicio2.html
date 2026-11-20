@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block titulo %}Ejercicio 2{% endblock %}
+
+{% block contenido %}
+    <h1>Ejercicio 2</h1>
+
+    <form method="POST">
+        <label for="nombre1">Nombre 1</label>
+        <input type="text" id="nombre1" name="nombre1" required>
+
+        <label for="nombre2">Nombre 2</label>
+        <input type="text" id="nombre2" name="nombre2" required>
+
+        <label for="nombre3">Nombre 3</label>
+        <input type="text" id="nombre3" name="nombre3" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if resultado %}
+        <div class="resultado">
+            <p>El nombre con mayor cantidad de caracteres es: <strong>{{ resultado.nombre }}</strong></p>
+            <p>El nombre tiene <strong>{{ resultado.cantidad }}</strong> caracteres</p>
+        </div>
+    {% endif %}
+
+    {% if historial %}
+        <h2>Historial</h2>
+        <ul>
+        {% for r in historial %}
+            <li>{{ r.nombre }} ({{ r.cantidad }} caracteres)</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a class="volver" href="{{ url_for('inicio') }}">Volver al menú</a>
+{% endblock %}
